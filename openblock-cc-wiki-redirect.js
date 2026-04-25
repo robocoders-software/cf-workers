@@ -1,5 +1,5 @@
-const github = "https://openblockcc.github.io";
-const gitee = "https://openblockcc.gitee.io";
+const github = "https://robocoders-software.github.io";
+const gitee = "https://robocoders-software.gitee.io";
 
 const statusCode = 302;
 

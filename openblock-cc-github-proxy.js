@@ -3,7 +3,7 @@
 /**
  * static files (404.html, sw.js, conf.js)
  */
-const ASSET_URL = 'https://openblockcc.github.io/cf-workers/400'
+const ASSET_URL = 'https://robocoders-software.github.io/cf-workers/400'
 
 const PREFIX = '/'
 
@@ -63,16 +63,16 @@ async function fetchHandler(e) {
 
     if (req.cf.country === 'CN') {
         // releases archive
-        const exp1 = /^(?:https?:\/\/)?github\.com\/openblockcc\/.+?\/(?:releases|archive)\/.*$/i
+        const exp1 = /^(?:https?:\/\/)?github\.com\/robocoders-software\/.+?\/(?:releases|archive)\/.*$/i
         
         // releases atom
-        const exp2 = /^(?:https?:\/\/)?github\.com\/openblockcc\/.+?\/(?:releases|archive)\.atom.*?$/i
+        const exp2 = /^(?:https?:\/\/)?github\.com\/robocoders-software\/.+?\/(?:releases|archive)\.atom.*?$/i
 
         // raw.githubusercontent.com
         const exp3 = /^(?:https?:\/\/)?raw\.(?:githubusercontent|github)\.com\/.+?\/.+?\/.+?\/.+$/i
 
-        // api.github.com/xx/{user}/openblockcc/*
-        const exp4 = /^(?:https?:\/\/)?api\.github\.com\/.+?\/openblockcc\/.+?\/.*$/i
+        // api.github.com/xx/{user}/robocoders-software/*
+        const exp4 = /^(?:https?:\/\/)?api\.github\.com\/.+?\/robocoders-software\/.+?\/.*$/i
 
         if (path.search(exp1) === 0 || path.search(exp2) === 0 || path.search(exp4) === 0) {
             return httpHandler(req, path)
